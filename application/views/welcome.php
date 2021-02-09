@@ -34,11 +34,6 @@
     <!-- App CSS -->
     <link type="text/css" href="assets/css/app.css" rel="stylesheet">
 
-
-
-
-
-
 </head>
 
 <body class="layout-sticky-subnav layout-default ">
