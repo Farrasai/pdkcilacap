@@ -1,5 +1,5 @@
 <?php
-//Subscribe Youtube Channel Peternak Kode on https://youtube.com/c/peternakkode
+
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
@@ -8,14 +8,12 @@ class Unitkerja extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        sf_construct();
         $this->load->model('Unitkerja_model');
         $this->load->library('form_validation');
     }
 
     public function index()
-    {   
-        sf_validate('M');
+    {
         $q = urldecode($this->input->get('q', TRUE));
         $start = intval($this->input->get('start'));
         
@@ -41,52 +39,15 @@ class Unitkerja extends CI_Controller
             'pagination' => $this->pagination->create_links(),
             'total_rows' => $config['total_rows'],
             'start' => $start,
-            'content' => 'backend/unitkerja/unitkerja_list',
         );
-        $this->load->view(layout(), $data);
-    }
-
-    public function lookup()
-    {
-        sf_validate('M');
-        $q = urldecode($this->input->get('q', TRUE));
-        $start = intval($this->input->get('start'));
-        $idhtml = $this->input->get('idhtml');
-        
-        if ($q <> '') {
-            $config['base_url'] = base_url() . 'unitkerja/index.html?q=' . urlencode($q);
-            $config['first_url'] = base_url() . 'unitkerja/index.html?q=' . urlencode($q);
-        } else {
-            $config['base_url'] = base_url() . 'unitkerja/index.html';
-            $config['first_url'] = base_url() . 'unitkerja/index.html';
-        }
-
-        $config['per_page'] = 10;
-        $config['page_query_string'] = TRUE;
-        $config['total_rows'] = $this->Unitkerja_model->total_rows($q);
-        $unitkerja = $this->Unitkerja_model->get_limit_data($config['per_page'], $start, $q);
-
-
-        $data = array(
-            'unitkerja_data' => $unitkerja,
-            'idhtml' => $idhtml,
-            'q' => $q,
-            'total_rows' => $config['total_rows'],
-            'start' => $start,
-            'content' => 'backend/unitkerja/unitkerja_lookup',
-        );
-        ob_start();
-        $this->load->view($data['content'], $data);
-        return ob_get_contents();
-        ob_end_clean();
+        $this->load->view('unitkerja/unitkerja_list', $data);
     }
 
     public function read($id) 
     {
-        sf_validate('R');
         $row = $this->Unitkerja_model->get_by_id($id);
         if ($row) {
-        $data = array(
+            $data = array(
 		'id_unitkerja' => $row->id_unitkerja,
 		'nama_unit' => $row->nama_unit,
 		'deskripsi' => $row->deskripsi,
@@ -101,9 +62,8 @@ class Unitkerja extends CI_Controller
 		'jumlah_pegawai' => $row->jumlah_pegawai,
 		'created_at' => $row->created_at,
 		'updated_at' => $row->updated_at,
-	    'content' => 'backend/unitkerja/unitkerja_read',
 	    );
-            $this->load->view(layout(), $data);
+            $this->load->view('unitkerja/unitkerja_read', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('unitkerja'));
@@ -112,10 +72,9 @@ class Unitkerja extends CI_Controller
 
     public function create() 
     {
-        sf_validate('C');
         $data = array(
-        'button' => 'Create',
-        'action' => site_url('unitkerja/create_action'),
+            'button' => 'Create',
+            'action' => site_url('unitkerja/create_action'),
 	    'id_unitkerja' => set_value('id_unitkerja'),
 	    'nama_unit' => set_value('nama_unit'),
 	    'deskripsi' => set_value('deskripsi'),
@@ -130,14 +89,12 @@ class Unitkerja extends CI_Controller
 	    'jumlah_pegawai' => set_value('jumlah_pegawai'),
 	    'created_at' => set_value('created_at'),
 	    'updated_at' => set_value('updated_at'),
-	    'content' => 'backend/unitkerja/unitkerja_form',
 	);
-        $this->load->view(layout(), $data);
+        $this->load->view('unitkerja/unitkerja_form', $data);
     }
     
     public function create_action() 
     {
-        sf_validate('c');        
         $this->_rules();
 
         if ($this->form_validation->run() == FALSE) {
@@ -155,25 +112,24 @@ class Unitkerja extends CI_Controller
 		'email' => $this->input->post('email',TRUE),
 		'maps' => $this->input->post('maps',TRUE),
 		'jumlah_pegawai' => $this->input->post('jumlah_pegawai',TRUE),
-		'created_at' => date('Y-m-d H:i:s'),
+		'created_at' => $this->input->post('created_at',TRUE),
 		'updated_at' => $this->input->post('updated_at',TRUE),
 	    );
 
             $this->Unitkerja_model->insert($data);
-            $this->session->set_flashdata('message', 'Data baru berhasil ditambahkan!');
+            $this->session->set_flashdata('message', 'Create Record Success');
             redirect(site_url('unitkerja'));
         }
     }
     
     public function update($id) 
     {
-        sf_validate('U');
         $row = $this->Unitkerja_model->get_by_id($id);
 
         if ($row) {
             $data = array(
-            'button' => 'Update',
-            'action' => site_url('unitkerja/update_action'),
+                'button' => 'Update',
+                'action' => site_url('unitkerja/update_action'),
 		'id_unitkerja' => set_value('id_unitkerja', $row->id_unitkerja),
 		'nama_unit' => set_value('nama_unit', $row->nama_unit),
 		'deskripsi' => set_value('deskripsi', $row->deskripsi),
@@ -188,22 +144,16 @@ class Unitkerja extends CI_Controller
 		'jumlah_pegawai' => set_value('jumlah_pegawai', $row->jumlah_pegawai),
 		'created_at' => set_value('created_at', $row->created_at),
 		'updated_at' => set_value('updated_at', $row->updated_at),
-	    'content' => 'backend/unitkerja/unitkerja_form',
 	    );
-            $this->load->view(layout(), $data);
+            $this->load->view('unitkerja/unitkerja_form', $data);
         } else {
-            $this->session->set_flashdata('message', 'Maaf, data tidak ditemukan');
+            $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('unitkerja'));
         }
     }
     
     public function update_action() 
     {
-        sf_validate('U');
-        if(!is_allow('U_'.ucwords($this->router->fetch_class()))){
-            $this->session->set_flashdata('message', 'Maaf, Anda tidak memiliki akses untuk membuat data '.ucwords($this->router->fetch_class()));
-            redirect(site_url(strtolower($this->router->fetch_class())));
-        }
         $this->_rules();
 
         if ($this->form_validation->run() == FALSE) {
@@ -222,30 +172,25 @@ class Unitkerja extends CI_Controller
 		'maps' => $this->input->post('maps',TRUE),
 		'jumlah_pegawai' => $this->input->post('jumlah_pegawai',TRUE),
 		'created_at' => $this->input->post('created_at',TRUE),
-		'updated_at' => date('Y-m-d H:i:s'),
+		'updated_at' => $this->input->post('updated_at',TRUE),
 	    );
 
             $this->Unitkerja_model->update($this->input->post('id_unitkerja', TRUE), $data);
-            $this->session->set_flashdata('message', 'Edit data telah berhasil!');
+            $this->session->set_flashdata('message', 'Update Record Success');
             redirect(site_url('unitkerja'));
         }
     }
     
     public function delete($id) 
     {
-        sf_validate('D');
         $row = $this->Unitkerja_model->get_by_id($id);
 
         if ($row) {
-            /*$data = array(
-                'isactive'=>0,
-            );
-            $this->Berita_model->update($id,$data);*/
             $this->Unitkerja_model->delete($id);
-            $this->session->set_flashdata('message', 'Hapus data berhasil!');
+            $this->session->set_flashdata('message', 'Delete Record Success');
             redirect(site_url('unitkerja'));
         } else {
-            $this->session->set_flashdata('message', 'Maaf, data tidak ditemukan');
+            $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('unitkerja'));
         }
     }
@@ -263,15 +208,15 @@ class Unitkerja extends CI_Controller
 	$this->form_validation->set_rules('email', 'email', 'trim|required');
 	$this->form_validation->set_rules('maps', 'maps', 'trim|required');
 	$this->form_validation->set_rules('jumlah_pegawai', 'jumlah pegawai', 'trim|required');
-	$this->form_validation->set_rules('created_at', 'created at', 'trim');
-	$this->form_validation->set_rules('updated_at', 'updated at', 'trim');
+	$this->form_validation->set_rules('created_at', 'created at', 'trim|required');
+	$this->form_validation->set_rules('updated_at', 'updated at', 'trim|required');
+
 	$this->form_validation->set_rules('id_unitkerja', 'id_unitkerja', 'trim');
 	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
     }
 
     public function excel()
     {
-        sf_validate('E');
         $this->load->helper('exportexcel');
         $namaFile = "unitkerja.xls";
         $judul = "unitkerja";
@@ -338,7 +283,5 @@ class Unitkerja extends CI_Controller
 /* End of file Unitkerja.php */
 /* Location: ./application/controllers/Unitkerja.php */
 /* Please DO NOT modify this information : */
-/* Generated by Harviacode Codeigniter CRUD Generator 2021-02-09 02:43:25 */
+/* Generated by Harviacode Codeigniter CRUD Generator 2021-02-09 04:18:32 */
 /* http://harviacode.com */
-/* Customized by Youtube Channel: Peternak Kode (A Channel gives many free codes)*/
-/* Visit here: https://youtube.com/c/peternakkode */

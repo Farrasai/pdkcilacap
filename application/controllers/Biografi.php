@@ -1,5 +1,5 @@
 <?php
-//Subscribe Youtube Channel Peternak Kode on https://youtube.com/c/peternakkode
+
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
@@ -8,14 +8,12 @@ class Biografi extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        sf_construct();
         $this->load->model('Biografi_model');
         $this->load->library('form_validation');
     }
 
     public function index()
-    {   
-        sf_validate('M');
+    {
         $q = urldecode($this->input->get('q', TRUE));
         $start = intval($this->input->get('start'));
         
@@ -41,52 +39,15 @@ class Biografi extends CI_Controller
             'pagination' => $this->pagination->create_links(),
             'total_rows' => $config['total_rows'],
             'start' => $start,
-            'content' => 'backend/biografi/biografi_list',
         );
-        $this->load->view(layout(), $data);
-    }
-
-    public function lookup()
-    {
-        sf_validate('M');
-        $q = urldecode($this->input->get('q', TRUE));
-        $start = intval($this->input->get('start'));
-        $idhtml = $this->input->get('idhtml');
-        
-        if ($q <> '') {
-            $config['base_url'] = base_url() . 'biografi/index.html?q=' . urlencode($q);
-            $config['first_url'] = base_url() . 'biografi/index.html?q=' . urlencode($q);
-        } else {
-            $config['base_url'] = base_url() . 'biografi/index.html';
-            $config['first_url'] = base_url() . 'biografi/index.html';
-        }
-
-        $config['per_page'] = 10;
-        $config['page_query_string'] = TRUE;
-        $config['total_rows'] = $this->Biografi_model->total_rows($q);
-        $biografi = $this->Biografi_model->get_limit_data($config['per_page'], $start, $q);
-
-
-        $data = array(
-            'biografi_data' => $biografi,
-            'idhtml' => $idhtml,
-            'q' => $q,
-            'total_rows' => $config['total_rows'],
-            'start' => $start,
-            'content' => 'backend/biografi/biografi_lookup',
-        );
-        ob_start();
-        $this->load->view($data['content'], $data);
-        return ob_get_contents();
-        ob_end_clean();
+        $this->load->view('biografi/biografi_list', $data);
     }
 
     public function read($id) 
     {
-        sf_validate('R');
         $row = $this->Biografi_model->get_by_id($id);
         if ($row) {
-        $data = array(
+            $data = array(
 		'id_biografi' => $row->id_biografi,
 		'nama' => $row->nama,
 		'jabatan' => $row->jabatan,
@@ -98,9 +59,8 @@ class Biografi extends CI_Controller
 		'karir' => $row->karir,
 		'created_at' => $row->created_at,
 		'updated_at' => $row->updated_at,
-	    'content' => 'backend/biografi/biografi_read',
 	    );
-            $this->load->view(layout(), $data);
+            $this->load->view('biografi/biografi_read', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('biografi'));
@@ -109,10 +69,9 @@ class Biografi extends CI_Controller
 
     public function create() 
     {
-        sf_validate('C');
         $data = array(
-        'button' => 'Create',
-        'action' => site_url('biografi/create_action'),
+            'button' => 'Create',
+            'action' => site_url('biografi/create_action'),
 	    'id_biografi' => set_value('id_biografi'),
 	    'nama' => set_value('nama'),
 	    'jabatan' => set_value('jabatan'),
@@ -124,14 +83,12 @@ class Biografi extends CI_Controller
 	    'karir' => set_value('karir'),
 	    'created_at' => set_value('created_at'),
 	    'updated_at' => set_value('updated_at'),
-	    'content' => 'backend/biografi/biografi_form',
 	);
-        $this->load->view(layout(), $data);
+        $this->load->view('biografi/biografi_form', $data);
     }
     
     public function create_action() 
     {
-        sf_validate('c');        
         $this->_rules();
 
         if ($this->form_validation->run() == FALSE) {
@@ -146,25 +103,24 @@ class Biografi extends CI_Controller
 		'foto' => $this->input->post('foto',TRUE),
 		'pendidikan' => $this->input->post('pendidikan',TRUE),
 		'karir' => $this->input->post('karir',TRUE),
-		'created_at' => date('Y-m-d H:i:s'),
+		'created_at' => $this->input->post('created_at',TRUE),
 		'updated_at' => $this->input->post('updated_at',TRUE),
 	    );
 
             $this->Biografi_model->insert($data);
-            $this->session->set_flashdata('message', 'Data baru berhasil ditambahkan!');
+            $this->session->set_flashdata('message', 'Create Record Success');
             redirect(site_url('biografi'));
         }
     }
     
     public function update($id) 
     {
-        sf_validate('U');
         $row = $this->Biografi_model->get_by_id($id);
 
         if ($row) {
             $data = array(
-            'button' => 'Update',
-            'action' => site_url('biografi/update_action'),
+                'button' => 'Update',
+                'action' => site_url('biografi/update_action'),
 		'id_biografi' => set_value('id_biografi', $row->id_biografi),
 		'nama' => set_value('nama', $row->nama),
 		'jabatan' => set_value('jabatan', $row->jabatan),
@@ -176,22 +132,16 @@ class Biografi extends CI_Controller
 		'karir' => set_value('karir', $row->karir),
 		'created_at' => set_value('created_at', $row->created_at),
 		'updated_at' => set_value('updated_at', $row->updated_at),
-	    'content' => 'backend/biografi/biografi_form',
 	    );
-            $this->load->view(layout(), $data);
+            $this->load->view('biografi/biografi_form', $data);
         } else {
-            $this->session->set_flashdata('message', 'Maaf, data tidak ditemukan');
+            $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('biografi'));
         }
     }
     
     public function update_action() 
     {
-        sf_validate('U');
-        if(!is_allow('U_'.ucwords($this->router->fetch_class()))){
-            $this->session->set_flashdata('message', 'Maaf, Anda tidak memiliki akses untuk membuat data '.ucwords($this->router->fetch_class()));
-            redirect(site_url(strtolower($this->router->fetch_class())));
-        }
         $this->_rules();
 
         if ($this->form_validation->run() == FALSE) {
@@ -207,30 +157,25 @@ class Biografi extends CI_Controller
 		'pendidikan' => $this->input->post('pendidikan',TRUE),
 		'karir' => $this->input->post('karir',TRUE),
 		'created_at' => $this->input->post('created_at',TRUE),
-		'updated_at' => date('Y-m-d H:i:s'),
+		'updated_at' => $this->input->post('updated_at',TRUE),
 	    );
 
             $this->Biografi_model->update($this->input->post('id_biografi', TRUE), $data);
-            $this->session->set_flashdata('message', 'Edit data telah berhasil!');
+            $this->session->set_flashdata('message', 'Update Record Success');
             redirect(site_url('biografi'));
         }
     }
     
     public function delete($id) 
     {
-        sf_validate('D');
         $row = $this->Biografi_model->get_by_id($id);
 
         if ($row) {
-            /*$data = array(
-                'isactive'=>0,
-            );
-            $this->Berita_model->update($id,$data);*/
             $this->Biografi_model->delete($id);
-            $this->session->set_flashdata('message', 'Hapus data berhasil!');
+            $this->session->set_flashdata('message', 'Delete Record Success');
             redirect(site_url('biografi'));
         } else {
-            $this->session->set_flashdata('message', 'Maaf, data tidak ditemukan');
+            $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('biografi'));
         }
     }
@@ -245,15 +190,15 @@ class Biografi extends CI_Controller
 	$this->form_validation->set_rules('foto', 'foto', 'trim|required');
 	$this->form_validation->set_rules('pendidikan', 'pendidikan', 'trim|required');
 	$this->form_validation->set_rules('karir', 'karir', 'trim|required');
-	$this->form_validation->set_rules('created_at', 'created at', 'trim');
-	$this->form_validation->set_rules('updated_at', 'updated at', 'trim');
+	$this->form_validation->set_rules('created_at', 'created at', 'trim|required');
+	$this->form_validation->set_rules('updated_at', 'updated at', 'trim|required');
+
 	$this->form_validation->set_rules('id_biografi', 'id_biografi', 'trim');
 	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
     }
 
     public function excel()
     {
-        sf_validate('E');
         $this->load->helper('exportexcel');
         $namaFile = "biografi.xls";
         $judul = "biografi";
@@ -314,7 +259,5 @@ class Biografi extends CI_Controller
 /* End of file Biografi.php */
 /* Location: ./application/controllers/Biografi.php */
 /* Please DO NOT modify this information : */
-/* Generated by Harviacode Codeigniter CRUD Generator 2021-02-09 02:43:23 */
+/* Generated by Harviacode Codeigniter CRUD Generator 2021-02-09 04:18:31 */
 /* http://harviacode.com */
-/* Customized by Youtube Channel: Peternak Kode (A Channel gives many free codes)*/
-/* Visit here: https://youtube.com/c/peternakkode */
