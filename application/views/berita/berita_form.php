@@ -17,7 +17,7 @@
             <input type="text" class="form-control" name="judul" id="judul" placeholder="Judul" value="<?php echo $judul; ?>" />
         </div>
 	    <div class="form-group">
-            <label for="varchar">Seo Judul <?php echo form_error('seo_judul') ?></label>
+            <label for="varchar">Sub Judul <?php echo form_error('seo_judul') ?></label>
             <input type="text" class="form-control" name="seo_judul" id="seo_judul" placeholder="Seo Judul" value="<?php echo $seo_judul; ?>" />
         </div>
 	    <div class="form-group">
@@ -25,8 +25,18 @@
             <textarea class="form-control" rows="3" name="konten" id="konten" placeholder="Konten"><?php echo $konten; ?></textarea>
         </div>
 	    <div class="form-group">
-            <label for="varchar">Kategori <?php echo form_error('kategori') ?></label>
-            <input type="text" class="form-control" name="kategori" id="kategori" placeholder="Kategori" value="<?php echo $kategori; ?>" />
+            <label>Pilih Kategori</label>
+                <?php
+                    //while ($row = mysqli_fetch_assoc($result)) 
+                    {
+                        echo '<div class="form-check">';
+                        echo '<input class="form-check-input" type="checkbox" name="kategori[]" value="'.$row['id'].'">
+                            <label class="form-check-label">
+                                '.$row['kategori'].'
+                            </label>';
+                        echo '</div>';
+                    }
+                ?>
         </div>
 	    <div class="form-group">
             <label for="varchar">Foto <?php echo form_error('foto') ?></label>

@@ -3,6 +3,9 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
+    $sql = "select * from kategori";
+    //$result = mysqli_query($sql, $conn);
+
 class Berita extends CI_Controller
 {
     function __construct()
@@ -186,7 +189,6 @@ class Berita extends CI_Controller
 	$this->form_validation->set_rules('date', 'date', 'trim|required');
 	$this->form_validation->set_rules('updated_at', 'updated at', 'trim|required');
 	$this->form_validation->set_rules('is_active', 'is active', 'trim|required');
-
 	$this->form_validation->set_rules('id_berita', 'id_berita', 'trim');
 	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
     }
