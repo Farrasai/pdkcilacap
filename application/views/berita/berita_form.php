@@ -25,24 +25,24 @@
             <textarea class="form-control" rows="3" name="konten" id="konten" placeholder="Konten"><?php echo $konten; ?></textarea>
         </div>
 	    <div class="form-group">
-            <label>Pilih Kategori</label>
-                <?php
-                    //while ($row = mysqli_fetch_assoc($result)) 
-                    {
-                        echo '<div class="form-check">';
-                        echo '<input class="form-check-input" type="checkbox" name="kategori[]" value="'.$row['id'].'">
-                            <label class="form-check-label">
-                                '.$row['kategori'].'
-                            </label>';
-                        echo '</div>';
-                    }
-                ?>
+            <label>Pilih Kategori</label><?php echo form_error('kategori') ?></label>
+            <select>
+            <option>BIDANG PPTK</option>
+            <option>BIDANG DIKDAS</option>
+            <option>BIDANG PAUD DIKMAS</option>
+            <option>BIDANG KEBUDAYAAN</option>
+            <option>BIDANG SARPRAS</option>
+            <option>SEKRETARIAT</option>
+            <!--Kategori Ditambah-->
+            </select>
         </div>
 	    <div class="form-group">
+        <!--Jangan lupa ditambah jenis file-->
             <label for="varchar">Foto <?php echo form_error('foto') ?></label>
             <input type="file" class="form-control" name="foto" id="foto" placeholder="Foto" value="<?php echo $foto; ?>" />
         </div>
 	    <div class="form-group">
+        <!--ini jenis filenya belum-->
             <label for="varchar">File <?php echo form_error('file') ?></label>
             <input type="file" class="form-control" name="file" id="file" placeholder="File" value="<?php echo $file; ?>" />
         </div>

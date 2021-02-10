@@ -26,11 +26,11 @@
         </div>
 	    <div class="form-group">
             <label for="datetime">Created At <?php echo form_error('created_at') ?></label>
-            <input type="text" class="form-control" name="created_at" id="created_at" placeholder="Created At" value="<?php echo $created_at; ?>" />
+            <input type="date" class="form-control" name="created_at" id="created_at" placeholder="Created At" value="<?php echo $created_at; ?>" />
         </div>
 	    <div class="form-group">
             <label for="datetime">Update At <?php echo form_error('update_at') ?></label>
-            <input type="text" class="form-control" name="update_at" id="update_at" placeholder="Update At" value="<?php echo $update_at; ?>" />
+            <input type="date" class="form-control" name="update_at" id="update_at" placeholder="Update At" value="<?php echo $update_at; ?>" />
         </div>
 	    <input type="hidden" name="id_faq" value="<?php echo $id_faq; ?>" /> 
 	    <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 

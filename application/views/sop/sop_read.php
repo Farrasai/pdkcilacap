@@ -10,7 +10,7 @@
         </style>
     </head>
     <body>
-        <h2 style="margin-top:0px">Sop Read</h2>
+        <h2 style="margin-top:0px">SOP</h2>
         <table class="table">
 	    <tr><td>Judul</td><td><?php echo $judul; ?></td></tr>
 	    <tr><td>Unduh</td><td><?php echo $unduh; ?></td></tr>

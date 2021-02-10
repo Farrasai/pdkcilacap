@@ -26,7 +26,7 @@
         </div>
 	    <div class="form-group">
             <label for="varchar">Foto <?php echo form_error('foto') ?></label>
-            <input type="text" class="form-control" name="foto" id="foto" placeholder="Foto" value="<?php echo $foto; ?>" />
+            <input type="file" class="form-control" name="foto" id="foto" placeholder="Foto" value="<?php echo $foto; ?>" />
         </div>
 	    <input type="hidden" name="id_profil" value="<?php echo $id_profil; ?>" /> 
 	    <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 

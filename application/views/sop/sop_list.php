@@ -10,7 +10,7 @@
         </style>
     </head>
     <body>
-        <h2 style="margin-top:0px">Sop List</h2>
+        <h2 style="margin-top:0px">SOP</h2>
         <div class="row" style="margin-bottom: 10px">
             <div class="col-md-4">
                 <?php echo anchor(site_url('sop/create'),'Create', 'class="btn btn-primary"'); ?>
