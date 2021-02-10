@@ -25,7 +25,7 @@
             <textarea class="form-control" rows="3" name="konten" id="konten" placeholder="Konten"><?php echo $konten; ?></textarea>
         </div>
 	    <div class="form-group">
-            <label>Pilih Kategori</label><?php echo form_error('kategori') ?></label>
+            <label>Pilih Kategori</label><?php echo form_error('kategori') ?></label><br>
             <select>
             <option>BIDANG PPTK</option>
             <option>BIDANG DIKDAS</option>
@@ -39,7 +39,7 @@
 	    <div class="form-group">
         <!--Jangan lupa ditambah jenis file-->
             <label for="varchar">Foto <?php echo form_error('foto') ?></label>
-            <input type="file" class="form-control" name="foto" id="foto" placeholder="Foto" value="<?php echo $foto; ?>" />
+            <input type="file" accept="image/*" class="form-control" name="foto" id="foto" placeholder="Foto" value="<?php echo $foto; ?>" />
         </div>
 	    <div class="form-group">
         <!--ini jenis filenya belum-->

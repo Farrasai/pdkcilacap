@@ -34,7 +34,7 @@
         </div>
 	    <div class="form-group">
             <label for="varchar">Foto <?php echo form_error('foto') ?></label>
-            <input type="file" class="form-control" name="foto" id="foto" placeholder="Foto" value="<?php echo $foto; ?>" />
+            <input type="file" accept="image/*" class="form-control" name="foto" id="foto" placeholder="Foto" value="<?php echo $foto; ?>" />
         </div>
 	    <div class="form-group">
             <label for="pendidikan">Pendidikan <?php echo form_error('pendidikan') ?></label><br>
