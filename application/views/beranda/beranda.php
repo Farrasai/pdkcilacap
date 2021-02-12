@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <body class="layout-sticky-subnav layout-default ">
 
     <div class="preloader">
@@ -15,7 +14,7 @@
 
         <div id="header" class="mdk-header mdk-header--bg-dark bg-dark js-mdk-header mb-0" data-effects="parallax-background waterfall" data-fixed data-condenses>
             <div class="mdk-header__bg">
-                <div class="mdk-header__bg-front" style="background-image: url(assets/images/photodune-4161018-group-of-students-m.jpg);"></div>
+                <div class="mdk-header__bg-front" style="background-image: url(assets/images/landingpage.jpg);"></div>
             </div>
             <div class="mdk-header__content justify-content-center">
 
@@ -43,47 +42,54 @@
 
                     <ul class="nav navbar-nav d-none d-sm-flex flex justify-content-start ml-8pt">
                         <li class="nav-item active">
-                            <a href="fixed-index.html" class="nav-link">Home</a>
+                            <a href="fixed-index.html" class="nav-link">Beranda</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">Courses</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">Profil</a>
                             <div class="dropdown-menu">
-                                <a href="fixed-courses.html" class="dropdown-item">Browse Courses</a>
-                                <a href="fixed-student-course.html" class="dropdown-item">Preview Course</a>
-                                <a href="fixed-student-lesson.html" class="dropdown-item">Preview Lesson</a>
-                                <a href="fixed-student-take-course.html" class="dropdown-item"><span class="mr-16pt">Take Course</span> <span class="badge badge-notifications badge-accent text-uppercase ml-auto">Pro</span></a>
-                                <a href="fixed-student-take-lesson.html" class="dropdown-item">Take Lesson</a>
-                                <a href="fixed-student-take-quiz.html" class="dropdown-item">Take Quiz</a>
-                                <a href="fixed-student-quiz-result-details.html" class="dropdown-item">Quiz Result</a>
-                                <a href="fixed-student-dashboard.html" class="dropdown-item">Student Dashboard</a>
-                                <a href="fixed-student-my-courses.html" class="dropdown-item">My Courses</a>
-                                <a href="fixed-student-quiz-results.html" class="dropdown-item">My Quizzes</a>
-                                <a href="fixed-help-center.html" class="dropdown-item">Help Center</a>
+                                <a href="fixed-paths.html" class="dropdown-item">Profil Lembaga</a>
+                                <a href="fixed-student-path.html" class="dropdown-item">Struktur Organisasi</a>
+                                <a href="fixed-student-path-assessment.html" class="dropdown-item">Profil Pimpinan</a>
+                                <a href="fixed-student-path-assessment-result.html" class="dropdown-item">Unit Kerja</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">Paths</a>
-                            <div class="dropdown-menu">
-                                <a href="fixed-paths.html" class="dropdown-item">Browse Paths</a>
-                                <a href="fixed-student-path.html" class="dropdown-item">Path Details</a>
-                                <a href="fixed-student-path-assessment.html" class="dropdown-item">Skill Assessment</a>
-                                <a href="fixed-student-path-assessment-result.html" class="dropdown-item">Skill Result</a>
-                                <a href="fixed-student-paths.html" class="dropdown-item">My Paths</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a href="fixed-pricing.html" class="nav-link">Pricing</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">Berita</a>
+                            
                         </li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">Teachers</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">Pengumuman</a>
+                            
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">PPID</a>
                             <div class="dropdown-menu">
-                                <a href="fixed-instructor-dashboard.html" class="dropdown-item">Instructor Dashboard</a>
-                                <a href="fixed-instructor-courses.html" class="dropdown-item">Manage Courses</a>
-                                <a href="fixed-instructor-quizzes.html" class="dropdown-item">Manage Quizzes</a>
-                                <a href="fixed-instructor-earnings.html" class="dropdown-item">Earnings</a>
-                                <a href="fixed-instructor-statement.html" class="dropdown-item">Statement</a>
-                                <a href="fixed-instructor-edit-course.html" class="dropdown-item">Edit Course</a>
-                                <a href="fixed-instructor-edit-quiz.html" class="dropdown-item">Edit Quiz</a>
+                                <a href="fixed-instructor-dashboard.html" class="dropdown-item">Profil PPID</a>
+                                <a href="fixed-instructor-courses.html" class="dropdown-item">Informasi Berkala</a>
+                                <a href="fixed-instructor-quizzes.html" class="dropdown-item">Informasi Serta Merta</a>
+                                <a href="fixed-instructor-earnings.html" class="dropdown-item">Informasi Setiap Saat</a>
+                                <a href="fixed-instructor-statement.html" class="dropdown-item">Standar Pelayanan</a>
+                                <a href="fixed-instructor-edit-course.html" class="dropdown-item">Tata Acara Permohonan Informasi</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">Layanan</a>
+                            <div class="dropdown-menu">
+                                <a href="fixed-instructor-dashboard.html" class="dropdown-item">Legalisasi Ijazah SD SMP</a>
+                                <a href="fixed-instructor-courses.html" class="dropdown-item">SOP Ijin Operasional PAUD</a>
+                                <a href="fixed-instructor-quizzes.html" class="dropdown-item">Legalisasi Ijazah Paket ABC</a>
+                                <a href="fixed-instructor-earnings.html" class="dropdown-item">Rekomendasi Mutasi Sekolah</a>
+                                <a href="fixed-instructor-statement.html" class="dropdown-item">Layanan Pengaduann</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">Aplikasi</a>
+                            <div class="dropdown-menu">
+                                <a href="fixed-instructor-dashboard.html" class="dropdown-item">Data Referensi Pendidikan</a>
+                                <a href="fixed-instructor-courses.html" class="dropdown-item">Nomor Unik Pendidik dan Tenaga Kependidikan</a>
+                                <a href="fixed-instructor-quizzes.html" class="dropdown-item">Cek Data NISN</a>
+                                <a href="fixed-instructor-earnings.html" class="dropdown-item">Mutasi Siswa</a>
+                                <a href="fixed-instructor-statement.html" class="dropdown-item">Dapodik</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown" data-toggle="tooltip" data-title="Community" data-placement="bottom" data-boundary="window">
@@ -117,14 +123,14 @@
                             <a href="fixed-login.html" class="nav-link" data-toggle="tooltip" data-title="Login" data-placement="bottom" data-boundary="window"><i class="material-icons">lock_open</i></a>
                         </li>
                         <li class="nav-item">
-                            <a href="fixed-signup.html" class="btn btn-outline-white">Get Started</a>
+                            <a href="fixed-signup.html" class="btn btn-outline-white">COVID-19</a>
                         </li>
                     </ul>
                 </div>
 
                 <div class="hero container page__container text-center text-md-left py-112pt">
-                    <h1 class="text-white text-shadow">Learn to Code</h1>
-                    <p class="lead measure-hero-lead mx-auto mx-md-0 text-white text-shadow mb-48pt">Business, Technology and Creative Skills taught by industry experts. Explore a wide range of skills with our professional tutorials.</p>
+                    <h1 class="text-white text-shadow">Dinas Pendidikan dan Kebudayaan Kabupaten Cilacap</h1>
+                    <p class="lead measure-hero-lead mx-auto mx-md-0 text-white text-shadow mb-48pt">Ing ngarsa sung tulada, Ing madya mangun karsa,Tut wuri handayani</p>
 
 
                     <a href="fixed-courses.html" class="btn btn-lg btn-white btn--raised mb-16pt">Browse Courses</a>
@@ -2241,7 +2247,3 @@
 </body>
 
 </html>
-=======
-<!--Aku tidak tahu bedanya antara beranda dan dashboard :v-->
-<!--Sepertinya perlu penyederhanaan code karena load berat padahal belum ada animasi-->
->>>>>>> 5febab4c9e961b047c2e9df16fe46ab4d03494fe
