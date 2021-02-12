@@ -18,7 +18,7 @@
         </div>
 	    <div class="form-group">
             <label for="varchar">Deskripsi <?php echo form_error('deskripsi') ?></label>
-            <input type="text" class="form-control" name="deskripsi" id="deskripsi" placeholder="Deskripsi" value="<?php echo $deskripsi; ?>" />
+            <textarea class="form-control" rows="3" name="deskripsi" id="deskripsi" placeholder="Deskripsi"><?php echo $deskripsi; ?></textarea>
         </div>
 	    <div class="form-group">
             <label for="varchar">Struktur Bidang <?php echo form_error('struktur_bidang') ?></label>
@@ -26,15 +26,15 @@
         </div>
 	    <div class="form-group">
             <label for="varchar">Icon <?php echo form_error('icon') ?></label>
-            <input type="text" class="form-control" name="icon" id="icon" placeholder="Icon" value="<?php echo $icon; ?>" />
+            <input type="file" class="form-control" name="icon" id="icon" placeholder="Icon" value="<?php echo $icon; ?>" />
         </div>
 	    <div class="form-group">
             <label for="varchar">Foto <?php echo form_error('foto') ?></label>
-            <input type="text" class="form-control" name="foto" id="foto" placeholder="Foto" value="<?php echo $foto; ?>" />
+            <input type="file" accept="image/*" class="form-control" name="foto" id="foto" placeholder="Foto" value="<?php echo $foto; ?>" />
         </div>
 	    <div class="form-group">
             <label for="varchar">Alamat <?php echo form_error('alamat') ?></label>
-            <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Alamat" value="<?php echo $alamat; ?>" />
+            <textarea class="form-control" rows="3" name="alamat" id="alamat" placeholder="Alamat"><?php echo $alamat; ?></textarea>
         </div>
 	    <div class="form-group">
             <label for="varchar">Pimpinan <?php echo form_error('pimpinan') ?></label>
@@ -58,11 +58,11 @@
         </div>
 	    <div class="form-group">
             <label for="datetime">Created At <?php echo form_error('created_at') ?></label>
-            <input type="text" class="form-control" name="created_at" id="created_at" placeholder="Created At" value="<?php echo $created_at; ?>" />
+            <input type="date" class="form-control" name="created_at" id="created_at" placeholder="Created At" value="<?php echo $created_at; ?>" />
         </div>
 	    <div class="form-group">
             <label for="datetime">Updated At <?php echo form_error('updated_at') ?></label>
-            <input type="text" class="form-control" name="updated_at" id="updated_at" placeholder="Updated At" value="<?php echo $updated_at; ?>" />
+            <input type="date" class="form-control" name="updated_at" id="updated_at" placeholder="Updated At" value="<?php echo $updated_at; ?>" />
         </div>
 	    <input type="hidden" name="id_unitkerja" value="<?php echo $id_unitkerja; ?>" /> 
 	    <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 

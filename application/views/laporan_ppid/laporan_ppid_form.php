@@ -22,15 +22,15 @@
         </div>
 	    <div class="form-group">
             <label for="varchar">Unduh <?php echo form_error('unduh') ?></label>
-            <input type="text" class="form-control" name="unduh" id="unduh" placeholder="Unduh" value="<?php echo $unduh; ?>" />
+            <input type="file" class="form-control" name="unduh" id="unduh" placeholder="Unduh" value="<?php echo $unduh; ?>" />
         </div>
 	    <div class="form-group">
             <label for="datetime">Created At <?php echo form_error('created_at') ?></label>
-            <input type="text" class="form-control" name="created_at" id="created_at" placeholder="Created At" value="<?php echo $created_at; ?>" />
+            <input type="date" class="form-control" name="created_at" id="created_at" placeholder="Created At" value="<?php echo $created_at; ?>" />
         </div>
 	    <div class="form-group">
             <label for="datetime">Updated At <?php echo form_error('updated_at') ?></label>
-            <input type="text" class="form-control" name="updated_at" id="updated_at" placeholder="Updated At" value="<?php echo $updated_at; ?>" />
+            <input type="date" class="form-control" name="updated_at" id="updated_at" placeholder="Updated At" value="<?php echo $updated_at; ?>" />
         </div>
 	    <input type="hidden" name="id_laporan" value="<?php echo $id_laporan; ?>" /> 
 	    <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 

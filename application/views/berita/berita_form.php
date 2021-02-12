@@ -17,7 +17,7 @@
             <input type="text" class="form-control" name="judul" id="judul" placeholder="Judul" value="<?php echo $judul; ?>" />
         </div>
 	    <div class="form-group">
-            <label for="varchar">Seo Judul <?php echo form_error('seo_judul') ?></label>
+            <label for="varchar">Sub Judul <?php echo form_error('seo_judul') ?></label>
             <input type="text" class="form-control" name="seo_judul" id="seo_judul" placeholder="Seo Judul" value="<?php echo $seo_judul; ?>" />
         </div>
 	    <div class="form-group">
@@ -25,14 +25,24 @@
             <textarea class="form-control" rows="3" name="konten" id="konten" placeholder="Konten"><?php echo $konten; ?></textarea>
         </div>
 	    <div class="form-group">
-            <label for="varchar">Kategori <?php echo form_error('kategori') ?></label>
-            <input type="text" class="form-control" name="kategori" id="kategori" placeholder="Kategori" value="<?php echo $kategori; ?>" />
+            <label>Pilih Kategori</label><?php echo form_error('kategori') ?></label><br>
+            <select>
+            <option>BIDANG PPTK</option>
+            <option>BIDANG DIKDAS</option>
+            <option>BIDANG PAUD DIKMAS</option>
+            <option>BIDANG KEBUDAYAAN</option>
+            <option>BIDANG SARPRAS</option>
+            <option>SEKRETARIAT</option>
+            <!--Kategori Ditambah-->
+            </select>
         </div>
 	    <div class="form-group">
+        <!--Jangan lupa ditambah jenis file-->
             <label for="varchar">Foto <?php echo form_error('foto') ?></label>
-            <input type="file" class="form-control" name="foto" id="foto" placeholder="Foto" value="<?php echo $foto; ?>" />
+            <input type="file" accept="image/*" class="form-control" name="foto" id="foto" placeholder="Foto" value="<?php echo $foto; ?>" />
         </div>
 	    <div class="form-group">
+        <!--ini jenis filenya belum-->
             <label for="varchar">File <?php echo form_error('file') ?></label>
             <input type="file" class="form-control" name="file" id="file" placeholder="File" value="<?php echo $file; ?>" />
         </div>

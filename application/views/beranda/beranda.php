@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <body class="layout-sticky-subnav layout-default ">
 
     <div class="preloader">
@@ -2240,3 +2241,7 @@
 </body>
 
 </html>
+=======
+<!--Aku tidak tahu bedanya antara beranda dan dashboard :v-->
+<!--Sepertinya perlu penyederhanaan code karena load berat padahal belum ada animasi-->
+>>>>>>> 5febab4c9e961b047c2e9df16fe46ab4d03494fe
