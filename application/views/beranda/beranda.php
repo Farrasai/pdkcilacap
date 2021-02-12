@@ -51,6 +51,7 @@
                                 <a href="fixed-student-path.html" class="dropdown-item">Struktur Organisasi</a>
                                 <a href="fixed-student-path-assessment.html" class="dropdown-item">Profil Pimpinan</a>
                                 <a href="fixed-student-path-assessment-result.html" class="dropdown-item">Unit Kerja</a>
+                                <a href="fixed-student-path-assessment-result.html" class="dropdown-item">Koordinator Wilayah (UPT)</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -133,10 +134,10 @@
                     <p class="lead measure-hero-lead mx-auto mx-md-0 text-white text-shadow mb-48pt">Ing ngarsa sung tulada, Ing madya mangun karsa,Tut wuri handayani</p>
 
 
-                    <a href="fixed-courses.html" class="btn btn-lg btn-white btn--raised mb-16pt">Browse Courses</a>
+                    <a href="fixed-courses.html" class="btn btn-lg btn-white btn--raised mb-16pt">Guru Berbagi</a>
 
 
-                    <p class="mb-0"><a href="" class="text-white text-shadow"><strong>Are you a teacher?</strong></a></p>
+                    <p class="mb-0"><a href="" class="text-white text-shadow"><strong>Klik Pusat Bantuan?</strong></a></p>
 
                 </div>
             </div>
@@ -168,29 +169,29 @@
                     <div class="row align-items-center">
                         <div class="d-flex col-md align-items-center border-bottom border-md-0 mb-16pt mb-md-0 pb-16pt pb-md-0">
                             <div class="rounded-circle bg-primary w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                <i class="material-icons text-white">subscriptions</i>
+                                <i class="material-icons text-white">location_on</i>
                             </div>
                             <div class="flex">
-                                <div class="card-title mb-4pt">8,000+ Courses</div>
-                                <p class="card-subtitle text-black-70">Explore a wide range of skills.</p>
+                                <div class="card-title mb-4pt">Alamat Instansi</div>
+                                <p class="card-subtitle text-black-70">Jalan Kalimantan Nomor 51, Gunungsimping, Cilacap Tengah 53211</p>
                             </div>
                         </div>
                         <div class="d-flex col-md align-items-center border-bottom border-md-0 mb-16pt mb-md-0 pb-16pt pb-md-0">
                             <div class="rounded-circle bg-primary w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                <i class="material-icons text-white">verified_user</i>
+                                <i class="material-icons text-white">contact_phone</i>
                             </div>
                             <div class="flex">
-                                <div class="card-title mb-4pt">By Industry Experts</div>
-                                <p class="card-subtitle text-black-70">Professional development from the best people.</p>
+                                <div class="card-title mb-4pt">Telefon dan Faximile</div>
+                                <p class="card-subtitle text-black-70">(0282)542797 / 540579</p>
                             </div>
                         </div>
                         <div class="d-flex col-md align-items-center">
                             <div class="rounded-circle bg-primary w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                <i class="material-icons text-white">update</i>
+                                <i class="material-icons text-white">email</i>
                             </div>
                             <div class="flex">
-                                <div class="card-title mb-4pt">Unlimited Access</div>
-                                <p class="card-subtitle text-black-70">Unlock Library and learn any topic with one subscription.</p>
+                                <div class="card-title mb-4pt">Email</div>
+                                <p class="card-subtitle text-black-70">pdkclp@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -201,7 +202,7 @@
                 <div class="container page__container">
 
                     <div class="page-separator">
-                        <div class="page-separator__text">From the blog</div>
+                        <div class="page-separator__text">Pengumuman dan Info</div>
                     </div>
 
 
@@ -345,7 +346,7 @@
             <div class="page-section border-bottom-2">
                 <div class="container page__container">
                     <div class="page-separator">
-                        <div class="page-separator__text">Learning Paths</div>
+                        <div class="page-separator__text">Unit Kerja Dinas Pendidikan dan Kebudayaan Kab. Cilacap</div>
                     </div>
 
 
@@ -371,8 +372,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex">
-                                                    <div class="card-title">React Native</div>
-                                                    <p class="flex text-black-50 lh-1 mb-0"><small>18 courses</small></p>
+                                                    <div class="card-title">Sekretariat</div>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>Ferry Adhi Dharma,ST.MT</small></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -450,8 +451,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex">
-                                                    <div class="card-title">Dev Ops</div>
-                                                    <p class="flex text-black-50 lh-1 mb-0"><small>18 courses</small></p>
+                                                    <div class="card-title">Kebudayaan</div>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>Drs. Sukarno Sugiharto,MM</small></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -529,8 +530,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex">
-                                                    <div class="card-title">Redis</div>
-                                                    <p class="flex text-black-50 lh-1 mb-0"><small>18 courses</small></p>
+                                                    <div class="card-title">PAUD DIKMAS</div>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>Slamet Wigati,SE</small></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -614,8 +615,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex">
-                                                    <div class="card-title">MailChimp</div>
-                                                    <p class="flex text-black-50 lh-1 mb-0"><small>18 courses</small></p>
+                                                    <div class="card-title">Pembinaan Dikdas</div>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>Kastam,S.Pd,M.Pd</small></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -693,8 +694,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex">
-                                                    <div class="card-title">Swift</div>
-                                                    <p class="flex text-black-50 lh-1 mb-0"><small>18 courses</small></p>
+                                                    <div class="card-title">Pembinaan PPTK</div>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>Ratna Harminingsih,SH</small></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -772,8 +773,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex">
-                                                    <div class="card-title">WordPress</div>
-                                                    <p class="flex text-black-50 lh-1 mb-0"><small>18 courses</small></p>
+                                                    <div class="card-title">Sarana dan Prasarana</div>
+                                                    <p class="flex text-black-50 lh-1 mb-0"><small>Sungeb,S.Sos</small></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -840,7 +841,7 @@
             <div class="page-section border-bottom-2">
                 <div class="container page__container">
                     <div class="page-separator">
-                        <div class="page-separator__text">Design Courses</div>
+                        <div class="page-separator__text">Berita Dinas</div>
                     </div>
 
 
@@ -1305,108 +1306,156 @@
 
             <div class="page-section">
                 <div class="container page__container">
-                    <div class="page-headline text-center">
-                        <h2>Feedback</h2>
-                        <p class="lead measure-lead mx-auto text-black-70">What other students turned professionals have to say about us after learning with us and reaching their goals.</p>
+
+                    <div class="row">
+                        <div class="col-lg-8">
+
+                            <div class="page-separator">
+                                <div class="page-separator__text">Artikel Guru Berbagi</div>
+                            </div>
+
+                            <div class="mb-24pt">
+
+                            <div class="text-center d-flex align-items-center flex-wrap mb-32pt" style="white-space: nowrap;">
+                        <h5 class="mr-24pt mb-md-0 d-md-inline-block">Kategori</h5>
+                        <a href="" class="chip mb-16pt mb-md-0 chip-secondary">Artikel Baik</a>
+                        <a href="" class="chip mb-16pt mb-md-0 chip-outline-secondary">Sumber Belajar</a>
+                        <a href="" class="chip mb-16pt mb-md-0 chip-outline-secondary">Video Pintar</a>
+                        <a href="" class="chip mb-16pt mb-md-0 chip-outline-secondary d-md-none d-lg-inline-flex">SD SMP</a>
                     </div>
 
+                    <div class="row card-group-row">
+
+                        <div class="col-md-6 col-lg-4 card-group-row__col">
 
 
-                    <div class="position-relative carousel-card col-lg-8 p-0 mx-auto">
-                        <div class="row d-block js-mdk-carousel" id="carousel-feedback">
-                            <a class="carousel-control-next js-mdk-carousel-control mt-n24pt" href="#carousel-feedback" role="button" data-slide="next">
-                                <span class="carousel-control-icon material-icons" aria-hidden="true">keyboard_arrow_right</span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                            <div class="mdk-carousel__content">
 
-                                <div class="col-12 col-md-6">
 
-                                    <div class="card card-feedback card-body">
-                                        <blockquote class="blockquote mb-0">
-                                            <p class="text-70 small mb-0">A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.</p>
-                                        </blockquote>
-                                    </div>
-                                    <div class="media ml-12pt">
-                                        <div class="media-left mr-12pt">
-                                            <a href="fixed-student-profile.html" class="avatar avatar-sm">
-                                                <!-- <img src="assets/images/people/110/guy-.jpg" width="40" alt="avatar" class="rounded-circle"> -->
-                                                <span class="avatar-title rounded-circle">UK</span>
-                                            </a>
-                                        </div>
-                                        <div class="media-body media-middle">
-                                            <a href="fixed-student-profile.html" class="card-title">Umberto Kass</a>
-                                            <div class="rating mt-4pt">
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                <span class="rating__item"><span class="material-icons">star_border</span></span>
+
+                            <div class="card card--elevated posts-card-popular overlay card-group-row__card">
+                                <img src="assets/images/paths/sketch_430x168.png" alt="" class="card-img">
+                                <div class="fullbleed bg-primary" style="opacity: .5"></div>
+                                <div class="posts-card-popular__content">
+                                    <div class="card-body d-flex align-items-center">
+                                        <div class="avatar-group flex">
+                                            <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                                                <a href=""><img src="assets/images/256_luke-porter-261779-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
                                             </div>
                                         </div>
+                                        <a style="text-decoration: none;" class="d-flex align-items-center" href=""><i class="material-icons mr-1" style="font-size: inherit;">remove_red_eye</i> <small>327</small></a>
                                     </div>
-
+                                    <div class="posts-card-popular__title card-body">
+                                        <small class="text-muted text-uppercase">sketch</small>
+                                        <a class="card-title" href="fixed-blog-post.html">Merge Duplicates Inconsistent Symbols</a>
+                                    </div>
                                 </div>
+                            </div>
 
-                                <div class="col-12 col-md-6">
+                        </div>
 
-                                    <div class="card card-feedback card-body">
-                                        <blockquote class="blockquote mb-0">
-                                            <p class="text-70 small mb-0">A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.</p>
-                                        </blockquote>
-                                    </div>
-                                    <div class="media ml-12pt">
-                                        <div class="media-left mr-12pt">
-                                            <a href="fixed-student-profile.html" class="avatar avatar-sm">
-                                                <!-- <img src="assets/images/people/110/guy-.jpg" width="40" alt="avatar" class="rounded-circle"> -->
-                                                <span class="avatar-title rounded-circle">UK</span>
-                                            </a>
-                                        </div>
-                                        <div class="media-body media-middle">
-                                            <a href="fixed-student-profile.html" class="card-title">Umberto Kass</a>
-                                            <div class="rating mt-4pt">
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                <span class="rating__item"><span class="material-icons">star_border</span></span>
+                        <div class="col-md-6 col-lg-4 card-group-row__col">
+
+
+
+
+
+                            <div class="card card--elevated posts-card-popular overlay card-group-row__card">
+                                <img src="assets/images/paths/invision_430x168.png" alt="" class="card-img">
+                                <div class="fullbleed bg-primary" style="opacity: .5"></div>
+                                <div class="posts-card-popular__content">
+                                    <div class="card-body d-flex align-items-center">
+                                        <div class="avatar-group flex">
+                                            <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                                                <a href=""><img src="assets/images/256_michael-dam-258165-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
                                             </div>
                                         </div>
+                                        <a style="text-decoration: none;" class="d-flex align-items-center" href=""><i class="material-icons mr-1" style="font-size: inherit;">remove_red_eye</i> <small>327</small></a>
                                     </div>
-
+                                    <div class="posts-card-popular__title card-body">
+                                        <small class="text-muted text-uppercase">invision</small>
+                                        <a class="card-title" href="fixed-blog-post.html">Design Systems Essentials</a>
+                                    </div>
                                 </div>
+                            </div>
 
-                                <div class="col-12 col-md-6">
+                        </div>
 
-                                    <div class="card card-feedback card-body">
-                                        <blockquote class="blockquote mb-0">
-                                            <p class="text-70 small mb-0">A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.</p>
-                                        </blockquote>
-                                    </div>
-                                    <div class="media ml-12pt">
-                                        <div class="media-left mr-12pt">
-                                            <a href="fixed-student-profile.html" class="avatar avatar-sm">
-                                                <!-- <img src="assets/images/people/110/guy-.jpg" width="40" alt="avatar" class="rounded-circle"> -->
-                                                <span class="avatar-title rounded-circle">UK</span>
-                                            </a>
-                                        </div>
-                                        <div class="media-body media-middle">
-                                            <a href="fixed-student-profile.html" class="card-title">Umberto Kass</a>
-                                            <div class="rating mt-4pt">
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                <span class="rating__item"><span class="material-icons">star_border</span></span>
+                        <div class="col-md-6 col-lg-4 card-group-row__col">
+
+
+
+
+
+                            <div class="card card--elevated posts-card-popular overlay card-group-row__card">
+                                <img src="assets/images/paths/photoshop_430x168.png" alt="" class="card-img">
+                                <div class="fullbleed bg-primary" style="opacity: .5"></div>
+                                <div class="posts-card-popular__content">
+                                    <div class="card-body d-flex align-items-center">
+                                        <div class="avatar-group flex">
+                                            <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="Janell D.">
+                                                <a href=""><img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
                                             </div>
                                         </div>
+                                        <a style="text-decoration: none;" class="d-flex align-items-center" href=""><i class="material-icons mr-1" style="font-size: inherit;">remove_red_eye</i> <small>327</small></a>
                                     </div>
-
+                                    <div class="posts-card-popular__title card-body">
+                                        <small class="text-muted text-uppercase">photoshop</small>
+                                        <a class="card-title" href="fixed-blog-post.html">Semantic Logo Design</a>
+                                    </div>
                                 </div>
+                            </div>
+
+                        </div>
+
+                    </div>
 
                             </div>
+
+
+                            <ul class="pagination justify-content-start pagination-xsm m-0">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                        <span>Prev</span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Page 1">
+                                        <span>1</span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Page 2">
+                                        <span>2</span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span>Next</span>
+                                        <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                        <div class="col-lg-4">
+
+
+
+
+                            <div class="page-separator">
+                                <div class="page-separator__text">Info GPR</div>
+                            </div>
+                            <script type="text/javascript" src="https://widget.kominfo.go.id/gpr-widget-kominfo.min.js"></script>
+
+                            <div id="gpr-kominfo-widget-container"></div>
+
+
+
                         </div>
                     </div>
+
                 </div>
             </div>
 
@@ -1420,14 +1469,16 @@
         <div class="js-fix-footer2 bg-white border-top-2">
             <div class="container page__container page-section d-flex flex-column">
                 <p class="text-70 brand mb-24pt">
-                    <img class="brand-icon" src="assets/images/logo/black-70@2x.png" width="30" alt="Luma"> Luma
+                    <img class="brand-icon" src="assets/images/cilacap.png" width="30" alt="Luma"> Dinas Pendidikan dan Kebudayaan Kabupaten Cilacap
                 </p>
-                <p class="measure-lead-max text-50 small mr-8pt">Luma is a beautifully crafted user interface for modern Education Platforms, including Courses & Tutorials, Video Lessons, Student and Teacher Dashboard, Curriculum Management, Earnings and Reporting, ERP, HR, CMS, Tasks, Projects, eCommerce and more.</p>
+                <p class="measure-lead-max text-50 small mr-8pt">Sesuai Peraturan Bupati Cilacap No 87 Tahun 2016 Tentang Kedudukan,Susunan Organisasi Tugas dan Fungsi Serta Tata Kerja Dinas Pendidikan dan Kebudayaan Kebupaten Cilacap yaitu melaksanakan urusan pemerintahan bidang pendidikan dan bidang kebudayaan yang menjadi kewenangan daerah dan tugas pembantuan yang ditugaskan kepada daerah.</p>
                 <p class="mb-8pt d-flex">
-                    <a href="" class="text-70 text-underline mr-8pt small">Terms</a>
-                    <a href="" class="text-70 text-underline small">Privacy policy</a>
+                    <a href="" class="text-70 text-underline mr-8pt small">Tentang P dan K</a>
+                    <a href="" class="text-70 text-underline mr-8pt small">Pusat Bantuan</a>
+                    <a href="" class="text-70 text-underline mr-8pt small">Peta Situs</a>
+                    <a href="" class="text-70 text-underline mr-8pt small">ELHKPN</a>
                 </p>
-                <p class="text-50 small mt-n1 mb-0">Copyright 2019 &copy; All rights reserved.</p>
+                <p class="text-50 small mt-n1 mb-0">Copyright 2021 &copy; </p>
             </div>
         </div>
 
