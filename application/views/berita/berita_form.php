@@ -25,7 +25,7 @@
             <textarea class="form-control" rows="3" name="konten" id="konten" placeholder="Konten"><?php echo $konten; ?></textarea>
         </div>
 	    <div class="form-group">
-            <label>Pilih Kategori</label><?php echo form_error('kategori') ?></label><br>
+            <label>Pilih Kategori</label><?php echo form_error('kategori') ?><?php echo $kategori; ?></label><br>
             <select>
             <option>BIDANG PPTK</option>
             <option>BIDANG DIKDAS</option>
