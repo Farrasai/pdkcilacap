@@ -44,41 +44,41 @@
         <table class="table table-bordered" style="margin-bottom: 10px">
             <tr>
                 <th>No</th>
-		<th>Judul</th>
-		<th>Seo Judul</th>
-		<th>Konten</th>
-		<th>Kategori</th>
-		<th>Foto</th>
-		<th>File</th>
-		<th>Date</th>
-		<th>Updated At</th>
-		<th>Is Active</th>
-		<th>Action</th>
-            </tr><?php
-            foreach ($berita_data as $berita)
+                <th>Judul</th>
+                <th>Seo Judul</th>
+                <th>Konten</th>
+                <th>Kategori</th>
+                <th>Foto</th>
+                <th>File</th>
+                <th>Date</th>
+                <th>Updated At</th>
+                <th>Is Active</th>
+                <th>Action</th>
+            </tr>
+            <?php foreach ($berita_data as $berita)
             {
                 ?>
                 <tr>
-			<td width="80px"><?php echo ++$start ?></td>
-			<td><?php echo $berita->judul ?></td>
-			<td><?php echo $berita->seo_judul ?></td>
-			<td><?php echo $berita->konten ?></td>
-			<td><?php echo $berita->kategori ?></td>
-			<td><?php echo $berita->foto ?></td>
-			<td><?php echo $berita->file ?></td>
-			<td><?php echo $berita->date ?></td>
-			<td><?php echo $berita->updated_at ?></td>
-			<td><?php echo $berita->is_active ?></td>
-			<td style="text-align:center" width="200px">
-				<?php 
-				echo anchor(site_url('berita/read/'.$berita->id_berita),'Read'); 
-				echo ' | '; 
-				echo anchor(site_url('berita/update/'.$berita->id_berita),'Update'); 
-				echo ' | '; 
-				echo anchor(site_url('berita/delete/'.$berita->id_berita),'Delete','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
-				?>
-			</td>
-		</tr>
+                    <td width="80px"><?php echo ++$start ?></td>
+                    <td><?php echo $berita->judul ?></td>
+                    <td><?php echo $berita->seo_judul ?></td>
+                    <td><?php echo $berita->konten ?></td>
+                    <td><?php echo $berita->kategori ?></td>
+                    <td><?php echo $berita->foto ?> <img src="<?php echo base_url(). '/uploads'.$berita->foto ?>" > </td>
+                    <td><?php echo $berita->file ?></td>
+                    <td><?php echo $berita->date ?></td>
+                    <td><?php echo $berita->updated_at ?></td>
+                    <td><?php echo $berita->is_active ?></td>
+                    <td style="text-align:center" width="200px">
+                        <?php 
+                        echo anchor(site_url('berita/read/'.$berita->id_berita),'Read'); 
+                        echo ' | '; 
+                        echo anchor(site_url('berita/update/'.$berita->id_berita),'Update'); 
+                        echo ' | '; 
+                        echo anchor(site_url('berita/delete/'.$berita->id_berita),'Delete','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
+                        ?>
+                    </td>
+		        </tr>
                 <?php
             }
             ?>

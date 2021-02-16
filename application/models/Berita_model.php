@@ -82,6 +82,11 @@ class Berita_model extends CI_Model
         $this->db->delete($this->table);
     }
 
+    public function tampil_data()
+    {
+        return $this->db->get('berita');
+    }
+
 }
 
 /* End of file Berita_model.php */

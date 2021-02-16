@@ -4,7 +4,6 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
     $sql = "select * from kategori";
-    //$result = mysqli_query($sql, $conn);
 
 class Berita extends CI_Controller
 {
@@ -42,8 +41,12 @@ class Berita extends CI_Controller
             'pagination' => $this->pagination->create_links(),
             'total_rows' => $config['total_rows'],
             'start' => $start,
+            'tampil_data' => $this->Berita_model->tampil_data()->result(),
         );
+        $this->load->view('template/header');
+        //$this->load->view('template/sidebar');
         $this->load->view('berita/berita_list', $data);
+        $this->load->view('template/footer');
     }
 
     public function read($id) 
