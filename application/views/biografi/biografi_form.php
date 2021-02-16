@@ -37,8 +37,8 @@
             <input type="file" accept="image/*" class="form-control" name="foto" id="foto" placeholder="Foto" value="<?php echo $foto; ?>" />
         </div>
 	    <div class="form-group">
-            <label for="pendidikan">Pendidikan <?php echo form_error('pendidikan') ?></label><br>
-            <select>
+            <label for="pendidikan">Pendidikan <?php echo form_error('pendidikan') ?><?php echo $pendidikan; ?></label><br>
+            <select name="pendidikan" id="pendidikan">
             <option>SMA/SEDERAJAT</option>
             <option>D3</option>
             <option>S1/D4</option>

@@ -26,7 +26,7 @@
         </div>
 	    <div class="form-group">
             <label>Pilih Kategori</label><?php echo form_error('kategori') ?><?php echo $kategori; ?></label><br>
-            <select>
+            <select name="kategori" id="kategori">
             <option>BIDANG PPTK</option>
             <option>BIDANG DIKDAS</option>
             <option>BIDANG PAUD DIKMAS</option>

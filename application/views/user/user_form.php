@@ -49,8 +49,8 @@
             <input type="date" class="form-control" name="updated_at" id="updated_at" placeholder="Updated At" value="<?php echo $updated_at; ?>" />
         </div>
 	    <div class="form-group">
-            <label for="int">Role <?php echo form_error('role') ?></label><br>
-            <select>
+            <label for="int">Role <?php echo form_error('role') ?><?php echo $role; ?></label><br>
+            <select name="role" id="role">
             <option>Admin</option>
             <option>Kepala Seksi</option>
             <option>Karyawan</option>
