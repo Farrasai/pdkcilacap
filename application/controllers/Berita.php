@@ -45,7 +45,7 @@ class Berita extends CI_Controller
         );
         $this->load->view('template/header');
         //$this->load->view('template/sidebar');
-        $this->load->view('berita/berita_list', $data);
+        $this->load->view('berita/berita', $data);
         $this->load->view('template/footer');
     }
 
