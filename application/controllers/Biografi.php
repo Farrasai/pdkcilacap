@@ -41,8 +41,8 @@ class Biografi extends CI_Controller
             'start' => $start,
         );
         $this->load->view('template/header');
-        $this->load->view('template/sidebar');
-        $this->load->view('template/navbar');
+        //$this->load->view('template/sidebar');
+        //$this->load->view('template/navbar');
         $this->load->view('biografi/biografi_list', $data);
         $this->load->view('template/footer');
     }
@@ -65,8 +65,8 @@ class Biografi extends CI_Controller
 		'updated_at' => $row->updated_at,
 	    );
         $this->load->view('template/header');
-        $this->load->view('template/sidebar');
-        $this->load->view('template/navbar');
+        //$this->load->view('template/sidebar');
+        //$this->load->view('template/navbar');
         $this->load->view('biografi/biografi_read', $data);
         $this->load->view('template/footer');
         } else {
@@ -94,8 +94,8 @@ class Biografi extends CI_Controller
 	    'updated_at' => set_value('updated_at'),
 	);
         $this->load->view('template/header');
-        $this->load->view('template/sidebar');
-        $this->load->view('template/navbar');
+        //$this->load->view('template/sidebar');
+        //$this->load->view('template/navbar');
         $this->load->view('biografi/biografi_form', $data);
         $this->load->view('template/footer');
 
@@ -148,8 +148,8 @@ class Biografi extends CI_Controller
 		'updated_at' => set_value('updated_at', $row->updated_at),
 	    );
         $this->load->view('template/header');
-        $this->load->view('template/sidebar');
-        $this->load->view('template/navbar');
+        //$this->load->view('template/sidebar');
+        //$this->load->view('template/navbar');
         $this->load->view('biografi/biografi_form', $data);
         $this->load->view('template/footer');
         } else {
