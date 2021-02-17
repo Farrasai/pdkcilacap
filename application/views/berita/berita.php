@@ -80,7 +80,7 @@
 
                     <div class="row" role="tablist">
                         <div class="col-auto">
-                            <a href="" class="btn btn-outline-secondary">New Request</a>
+                            <a href="<?php echo site_url('berita/create'); ?>" class="btn btn-outline-secondary">Buat Berita</a>
                         </div>
                     </div>
 
@@ -112,9 +112,6 @@
 
                         <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-from" data-lists-sort-desc="true" data-lists-values='["js-lists-values-name", "js-lists-values-status", "js-lists-values-policy", "js-lists-values-reason", "js-lists-values-days", "js-lists-values-available", "js-lists-values-from", "js-lists-values-to"]'>
 
-
-
-
                             <table class="table mb-0 thead-border-top-0 table-nowrap">
                                 <thead>
                                     <tr>
@@ -127,29 +124,21 @@
                                         </th>
 
                                         <th>
-                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-name">Name</a>
+                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-name">Berita</a>
                                         </th>
                                         <th style="width: 48px;">
                                             <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-status">Status</a>
                                         </th>
                                         <th style="width: 48px;">
-                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-policy">Policy</a>
+                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-policy">Tanggal Terbit</a>
                                         </th>
                                         <th style="width: 150px;">
-                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-reason">Reason</a>
+                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-reason">Revisi Terakhir</a>
                                         </th>
                                         <th style="width: 48px;">
-                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-days">Days</a>
+                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-days">Aksi</a>
                                         </th>
-                                        <th style="width: 48px;">
-                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-available">Available</a>
-                                        </th>
-                                        <th style="width: 48px;">
-                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-from">From</a>
-                                        </th>
-                                        <th style="width: 48px;">
-                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-to">To</a>
-                                        </th>
+                                       
                                         <th style="width: 24px;"></th>
                                     </tr>
                                 </thead>
@@ -193,31 +182,20 @@
                                         </td>
                                         <td>
                                             <div class="d-flex flex-column">
-                                                <small class="js-lists-values-status text-50 mb-4pt"><?php echo $berita->konten ?></small>
+                                                <small class="js-lists-values-status text-50 mb-4pt"><?php echo $berita->is_active ?></small>
                                                 <span class="indicator-line rounded bg-warning"></span>
                                             </div>
                                         </td>
                                         <td>
-                                            <small class="js-lists-values-policy text-50"><?php echo $berita->file ?></small>
+                                            <small class="js-lists-values-policy text-50"><?php echo $berita->date ?></small>
                                         </td>
                                         <td>
-                                            <small class="js-lists-values-reason text-50"><?php echo $berita->date ?></small>
+                                            <small class="js-lists-values-reason text-50"><?php echo $berita->updated_at ?></small>
                                         </td>
                                         <td>
                                             <small class="js-lists-values-days text-50">15 days</small>
                                         </td>
-                                        <td>
-                                            <small class="js-lists-values-available text-50">22 days</small>
-                                        </td>
-                                        <td>
-                                            <small class="js-lists-values-from text-50">19/02/2019</small>
-                                        </td>
-                                        <td>
-                                            <small class="js-lists-values-to text-50">19/02/2019</small>
-                                        </td>
-                                        <td class="text-right">
-                                            <a href="" class="text-50"><i class="material-icons">more_vert</i></a>
-                                        </td>
+                                       
                                     </tr>
 
                                     <?php endforeach; ?>
