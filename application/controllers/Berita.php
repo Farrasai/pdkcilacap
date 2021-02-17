@@ -45,6 +45,7 @@ class Berita extends CI_Controller
         );
         $this->load->view('template/header');
         //$this->load->view('template/sidebar');
+        $this->load->view('template/navbar');
         $this->load->view('berita/berita_list', $data);
         $this->load->view('template/footer');
     }
@@ -139,6 +140,12 @@ class Berita extends CI_Controller
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('berita'));
+        }
+        $upload_image = $_FILES['foto', 'file']['name'];
+
+        if($upload_image)
+        {
+            $config['allowed_types']    = 'gif|png|jpg|jpeg';
         }
     }
     

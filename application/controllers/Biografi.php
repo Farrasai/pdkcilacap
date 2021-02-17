@@ -40,7 +40,11 @@ class Biografi extends CI_Controller
             'total_rows' => $config['total_rows'],
             'start' => $start,
         );
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $this->load->view('template/navbar');
         $this->load->view('biografi/biografi_list', $data);
+        $this->load->view('template/footer');
     }
 
     public function read($id) 
@@ -60,7 +64,11 @@ class Biografi extends CI_Controller
 		'created_at' => $row->created_at,
 		'updated_at' => $row->updated_at,
 	    );
-            $this->load->view('biografi/biografi_read', $data);
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $this->load->view('template/navbar');
+        $this->load->view('biografi/biografi_read', $data);
+        $this->load->view('template/footer');
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('biografi'));
@@ -69,6 +77,7 @@ class Biografi extends CI_Controller
 
     public function create() 
     {
+
         $data = array(
             'button' => 'Create',
             'action' => site_url('biografi/create_action'),
@@ -84,7 +93,12 @@ class Biografi extends CI_Controller
 	    'created_at' => set_value('created_at'),
 	    'updated_at' => set_value('updated_at'),
 	);
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $this->load->view('template/navbar');
         $this->load->view('biografi/biografi_form', $data);
+        $this->load->view('template/footer');
+
     }
     
     public function create_action() 
@@ -133,7 +147,11 @@ class Biografi extends CI_Controller
 		'created_at' => set_value('created_at', $row->created_at),
 		'updated_at' => set_value('updated_at', $row->updated_at),
 	    );
-            $this->load->view('biografi/biografi_form', $data);
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $this->load->view('template/navbar');
+        $this->load->view('biografi/biografi_form', $data);
+        $this->load->view('template/footer');
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('biografi'));
