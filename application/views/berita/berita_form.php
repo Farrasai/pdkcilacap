@@ -48,7 +48,7 @@
         </div>
 	    <div class="form-group">
             <label for="datetime">Date <?php echo form_error('date') ?></label>
-            <input type="date" class="form-control" name="date" id="date" placeholder="Date" value="<?php echo $date; ?>" disabled />
+            <input type="date" class="form-control" name="date" id="date" placeholder="Date" value="<?php echo $date; ?>"/>
         </div>
 	    <div class="form-group">
             <label for="datetime">Updated At <?php echo form_error('updated_at') ?></label>

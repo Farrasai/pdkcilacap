@@ -140,7 +140,7 @@ class Berita extends CI_Controller
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('berita'));
         }
-        $upload_image = $_FILES['foto']['name'];
+        /*$upload_image = $_FILES['foto']['name'];
 
         if($upload_image)
         {
@@ -159,7 +159,7 @@ class Berita extends CI_Controller
         } else
         {
             echo $this->upload->display_errors();
-        }
+        }*/
     }
     
     public function update_action() 
