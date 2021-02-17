@@ -144,7 +144,21 @@ class Berita extends CI_Controller
 
         if($upload_image)
         {
-            $config['allowed_types']    = 'gif|png|jpg|jpeg';
+            $config['allowed_types']    = 'gif|png|jpg|jpeg|bmp';
+            $config['upload_path']      = './assets/uploads/';
+
+            $this->load->library('upload', $config);
+
+            if ($old_image != 'default.jpg')
+            {
+                unlink(FCPATH . './assets/uploads/' . $old_image);
+            }
+
+            $new_image = $this->upload->data('file_name');
+            $this->db->set('image', $new_image);
+        } else
+        {
+            echo $this->upload->display_errors();
         }
     }
     
