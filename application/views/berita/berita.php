@@ -51,6 +51,9 @@
                         <div class="page-separator__text">Tabel Berita Dinas</div>
                     </div>
 
+
+                    
+                    
                     <div class="card mb-32pt">
 
                         <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-from" data-lists-sort-desc="true" data-lists-values='["js-lists-values-name", "js-lists-values-status", "js-lists-values-policy", "js-lists-values-reason", "js-lists-values-days", "js-lists-values-available", "js-lists-values-from", "js-lists-values-to"]'>
@@ -73,7 +76,7 @@
                                             <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-policy">Tanggal Terbit</a>
                                         </th>
                                         <th style="width: 150px;">
-                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-reason">Revisi Terakhir</a>
+                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-reason">Revisi</a>
                                         </th>
                                         <th style="width: 48px;">
                                             <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-days">Aksi</a>
@@ -126,16 +129,17 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <small class="js-lists-values-policy text-50"><?php echo $berita->date ?></small>
+                                            <small class="js-lists-values-policy text-50"><?php echo date('d F Y', strtotime($berita->date)); ?></small>
                                         </td>
                                         <td>
-                                            <small class="js-lists-values-reason text-50"><?php echo $berita->updated_at ?></small>
+                                            <small class="js-lists-values-reason text-50"><?php echo date('d F Y', strtotime($berita->updated_at)); ?></small>
                                         </td>
                                         <td>
                                             <small class="js-lists-values-days text-50">
                                             
-                                            <button type="button" class="btn btn-primary btn-sm">Ubah</button>
-                                            <button type="button" class="btn btn-accent btn-sm">Hapus</button>
+                                            <a href="<?= base_url('berita/update/'.$berita->id_berita); ?>" class="btn btn-primary btn-sm">Ubah</a>
+                                            <button type="button" class="btn btn-accent btn-sm text-white"><?php echo anchor(site_url('berita/delete/'.$berita->id_berita),'Hapus','onclick="javasciprt: return confirm(\'Tenan rep ngapus? ?\')"'); 
+                        ?></button>
                                             </small>
                                         </td>
                                        
