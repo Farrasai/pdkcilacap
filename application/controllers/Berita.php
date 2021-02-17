@@ -140,6 +140,12 @@ class Berita extends CI_Controller
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('berita'));
         }
+        $upload_image = $_FILES['foto', 'file']['name'];
+
+        if($upload_image)
+        {
+            $config['allowed_types']    = 'gif|png|jpg|jpeg';
+        }
     }
     
     public function update_action() 
