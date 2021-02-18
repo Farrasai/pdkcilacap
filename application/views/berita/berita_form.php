@@ -38,12 +38,12 @@
         </div>
 	    <div class="form-group">
         <!--Jangan lupa ditambah jenis file-->
-            <label for="varchar">Foto <?php echo form_error('foto') ?></label>
+            <label for="varchar">Foto <?php echo form_open_multipart('berita/do_upload');?> <?php echo form_error('foto') ?></label>
             <input type="file" accept="image/*" class="form-control" name="foto" id="foto" placeholder="Foto" value="<?php echo $foto; ?>" />
         </div>
 	    <div class="form-group">
         <!--ini jenis filenya belum-->
-            <label for="varchar">File <?php echo form_error('file') ?></label>
+            <label for="varchar">File <?php echo form_open_multipart('berita/do_upload');?><?php echo form_error('file') ?></label>
             <input type="file" class="form-control" name="file" id="file" placeholder="File" value="<?php echo $file; ?>" />
         </div>
 	    <div class="form-group">

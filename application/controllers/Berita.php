@@ -11,6 +11,7 @@ class Berita extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Berita_model');
+        $this->load->helper('url', 'form'); 
         $this->load->library('form_validation');
     }
 
@@ -160,6 +161,30 @@ class Berita extends CI_Controller
         {
             echo $this->upload->display_errors();
         }*/
+    }
+
+    public function do_upload()
+    {
+            $config['upload_path']          = './assets/uploads/';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg|bmp';
+            //$config['max_size']             = 100;
+            //$config['max_width']            = 1024;
+            //$config['max_height']           = 768;
+
+            $this->load->library('upload', $config);
+
+            if ( ! $this->upload->do_upload('foto'))
+            {
+                    $error = array('error' => $this->upload->display_errors());
+
+                    $this->load->view('berita/berita_form', $error);
+            }
+            else
+            {
+                    $data = array('upload_data' => $this->upload->data());
+
+                    $this->load->view('upload_success', $data);
+            }
     }
     
     public function update_action() 
