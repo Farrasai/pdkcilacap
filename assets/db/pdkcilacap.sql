@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 09, 2021 at 02:24 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.26
+-- Generation Time: Feb 23, 2021 at 08:23 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -41,6 +40,18 @@ CREATE TABLE `berita` (
   `is_active` char(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `berita`
+--
+
+INSERT INTO `berita` (`id_berita`, `judul`, `seo_judul`, `konten`, `kategori`, `foto`, `file`, `date`, `updated_at`, `is_active`) VALUES
+(2, 'Aku ingin dia', 'tapi dia suka sama yang lain', 'Pada suatu hari aku menyatakan perasaanku padanya, namun ternyata dia punya do\'i, aku harus apa???', 'BIDANG DIKDAS', '1590877082080.png', 'lb1GjcSe8NduqUkAqqRLCiwF01yXMYcEJyhclLUq.xlsx', '2021-02-03 00:00:00', '2021-02-08 00:00:00', '1'),
+(3, 'Nyoba lagi bro', 'kalu ngga bisa ya udah saya males', 'mas Farras jahat', 'BIDANG SARPRAS', 'tut-wuri-handayani-7759.png', 'Setting VPN.docx', '2021-02-01 00:00:00', '2021-02-18 00:00:00', '1'),
+(5, 'HAHAHHAHAH', 'meow meow meow', 'aku suka diaaaa ahdado;hdhahdadawd', 'BIDANG PPTK', '1590877082080.png', '4611418077-1602flowchart_ProposPKL-educa_studio-signed.pdf', '2021-02-18 00:00:00', '2021-02-18 00:00:00', '1'),
+(6, 'KONYOL', 'aaaaa sebel', 'kenapa tidak jadiii??????', 'BIDANG DIKDAS', '1590877082080.png', 'Surat persetujuan proposal PKL_4611418044_Fahri Raditya Wicaksana.pdf', '2021-02-18 00:00:00', '2021-02-18 00:00:00', '1'),
+(8, 'aa', 'aaa', 'aaaaa', 'BIDANG PPTK', '1590877082080.png', '4611418077-1602flowchart_ProposPKL-educa_studio-signed.pdf', '2021-02-18 00:00:00', '2021-02-18 00:00:00', '1'),
+(9, 'asasdada', 'adfwffs', 'fqwaqW YMBV NXBMGFDWWDS MJDDNXC VFJDIWK BXSEVDI Dcsd fdv', 'BIDANG PPTK', '1590877082080.png', 'Surat persetujuan proposal PKL_4611418044_Fahri Raditya Wicaksana.pdf', '2021-02-18 00:00:00', '2021-02-18 00:00:00', '1');
+
 -- --------------------------------------------------------
 
 --
@@ -60,6 +71,13 @@ CREATE TABLE `biografi` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `biografi`
+--
+
+INSERT INTO `biografi` (`id_biografi`, `nama`, `jabatan`, `alamat_kantor`, `deskripsi`, `lhkpn`, `foto`, `pendidikan`, `karir`, `created_at`, `updated_at`) VALUES
+(1, 'John Doe', 'Kepala Dinas', 'jl.Kenangan bersama dia no 1 RT69/RW 57', 'KEQINGG........... KEEEQIIING KEEQIING KEEEEEEEGIIIIIING AAAAAAAAA WANGI WANGI WANGI WANGI HU HA HU HA HU HA, aaaah baunya KEQING wangi aku mau nyiumin aroma wanginya KEQING AAAAAAAAH ~~ Rambutnya.... aaah rambutnya juga pengen aku elus-elus ~~~~~ AAAAAH KEQING MANIS BANGET YAAMPUN. dia JUGA PAKE STOCKING IMUT BANGET AAAAAAAAH KEQING LUCCUUUUUUUUUUUUUUU............ GUA BAKAL BAKAR DUIT 12 JUTA RUPIAH BUAT KEQING AAAAAAAAAAAAAAAAAAAAAAAAAAAAAGH\r\napa ? KEQING itu gak nyata ? Cuma karakter 2 dimensi katamu ? nggak, ngak ngak ngak ngak', '21274', 'breathing.png', 'SMA/SEDERAJAT', 'Profesor Percintaan', '2021-02-16 00:00:00', '2021-02-16 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -199,11 +217,13 @@ CREATE TABLE `user` (
   `password` varchar(250) NOT NULL,
   `email` varchar(250) NOT NULL,
   `foto` varchar(250) NOT NULL,
+  `level` enum('admin','user','guest') NOT NULL,
+  `block` enum('N','Y') NOT NULL,
+  `id_sessions` varchar(255) NOT NULL,
   `created_by` int(11) NOT NULL,
   `updated_by` int(11) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
-  `role` int(11) NOT NULL,
   `ip` varchar(250) NOT NULL,
   `last_login` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -283,10 +303,16 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `berita`
+--
+ALTER TABLE `berita`
+  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
 -- AUTO_INCREMENT for table `biografi`
 --
 ALTER TABLE `biografi`
-  MODIFY `id_biografi` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_biografi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `faq`
