@@ -33,7 +33,7 @@ class login_model extends CI_Model
         }
         else
         {
-            $this->session->set_flashdata('pesan','あなたのメールアドレスとパスワードが間違っています');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>申し訳ありませんが、ユーザー名とパスワードが間違っています。もう一度お試しください</div>');
             redirect('./administrator/auth');
         }
     }

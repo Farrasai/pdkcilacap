@@ -4,23 +4,25 @@
  <div class="mdk-header-layout__content page-content ">
     <div class="pt-32pt pt-sm-64pt pb-32pt">
         <div class="container page__container">
+        <div class="text-center">
+                    <?php echo $this->session->flashdata('pesan') ?>
+        </div>
             <form method="post" action="<?php echo base_url('administrator/auth/proses_login')?>" class="user, col-md-5 p-0 mx-auto">
                 <div class="form-group">
                     <label class="form-label" for="email">Email:</label>
                     <input id="email" type="text" name="email" class="form-control" placeholder="Your email address ...">
+                    <?php echo form_error('email', '<div class="text-danger small ml-3">, </div>') ?>
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="password">Password:</label>
                     <input id="password" type="password" name="password" class="form-control" placeholder="Your first and last name ...">
+                    <?php echo form_error('password', '<div class="text-danger small ml-3">, </div>') ?>
                     <p class="text-right"><a href="fixed-reset-password.html" class="small">Forgot your password?</a></p>
                 </div>
                 <div class="text-center">
                     <button class="btn btn-primary">Login</button>
                 </div>
                 <br>
-                <div class="text-center">
-                    <?php echo $this->session->flashdata('pesan') ?>
-                </div>
             </form>
         </div>
     </div>
