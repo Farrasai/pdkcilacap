@@ -17,6 +17,10 @@
                 <div class="text-center">
                     <button class="btn btn-primary">Login</button>
                 </div>
+                <br>
+                <div class="text-center">
+                    <?php echo $this->session->flashdata('pesan') ?>
+                </div>
             </form>
         </div>
     </div>

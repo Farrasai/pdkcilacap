@@ -26,9 +26,15 @@ class login_model extends CI_Model
                     $sess_data ['email']        = $ck->email;
                     $sess_data ['password']     = $ck->password;
                     $sess_data ['level']        = $ck->level;
+                    $this->session->set_userdata($sess_data);
                 }
                 redirect('./administrator/dashboard');
             }
+        }
+        else
+        {
+            $this->session->set_flashdata('pesan','あなたのメールアドレスとパスワードが間違っています');
+            redirect('./administrator/auth');
         }
     }
 }
