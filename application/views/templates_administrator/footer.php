@@ -1,12 +1,10 @@
+ <!--Jangan mengubah template kecuali memang sangat diperlukan, takut ancur tampilannya-->
+ <!--Untuk Header Footer dan Sidebar sudah memakai Template-->
 <br>
 
 
 
 </br>
-
-
-
-
 <div class="js-fix-footer2 bg-white border-top-2">
             <div class="container page__container page-section d-flex flex-column">
                 <p class="text-70 brand mb-24pt">

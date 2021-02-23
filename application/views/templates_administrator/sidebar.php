@@ -1,4 +1,6 @@
-<body class="layout-sticky-subnav layout-default ">
+ <!--Jangan mengubah template kecuali memang sangat diperlukan, takut ancur tampilannya-->
+ <!--Untuk Header Footer dan Sidebar sudah memakai Template-->
+<body class="layout-sticky-subnav layout-default sub-layout">
 
     <div class="preloader">
         <div class="sk-double-bounce">
@@ -70,11 +72,6 @@
 
 
 
-
-                    <form class="search-form navbar-search d-none d-md-flex mr-16pt" action="fixed-index.html">
-                        <button class="btn" type="submit"><i class="material-icons">search</i></button>
-                        <input type="text" class="form-control" placeholder="Search ...">
-                    </form>
 
 
                     <div class="flex"></div>
@@ -236,11 +233,18 @@
         </div>
 
         <!-- // END Header -->
-        <!-- drawer -->
+         <!-- drawer -->
     <div class="mdk-drawer js-mdk-drawer" id="default-drawer">
         <div class="mdk-drawer__content">
             <div class="sidebar sidebar-dark-dodger-blue sidebar-left" data-perfect-scrollbar>
 
+
+                <div class="d-flex align-items-center navbar-height">
+                    <form action="fixed-index.html" class="search-form search-form--black mx-16pt pr-0 pl-16pt">
+                        <input type="text" class="form-control pl-0" placeholder="Search">
+                        <button class="btn" type="submit"><i class="material-icons">search</i></button>
+                    </form>
+                </div>
 
 
 
@@ -592,14 +596,14 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="sidebar-menu-item active open">
+                    <li class="sidebar-menu-item">
                         <a class="sidebar-menu-button" data-toggle="collapse" href="#cms_menu">
                             <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">content_copy</span>
                             CMS
                             <span class="ml-auto sidebar-menu-toggle-icon"></span>
                         </a>
-                        <ul class="sidebar-submenu collapse show sm-indent" id="cms_menu">
-                            <li class="sidebar-menu-item active">
+                        <ul class="sidebar-submenu collapse sm-indent" id="cms_menu">
+                            <li class="sidebar-menu-item">
                                 <a class="sidebar-menu-button" href="fixed-cms-dashboard.html">
                                     <span class="sidebar-menu-text">CMS Dashboard</span>
                                 </a>
@@ -958,37 +962,37 @@
                         </a>
                         <ul class="sidebar-submenu collapse sm-indent" id="layouts_menu">
                             <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="compact-cms-dashboard.html">
+                                <a class="sidebar-menu-button" href="compact-email.html">
                                     <span class="sidebar-menu-text">Compact</span>
                                 </a>
                             </li>
                             <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="mini-cms-dashboard.html">
+                                <a class="sidebar-menu-button" href="mini-email.html">
                                     <span class="sidebar-menu-text">Mini</span>
                                 </a>
                             </li>
                             <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="mini-secondary-cms-dashboard.html">
+                                <a class="sidebar-menu-button" href="mini-secondary-email.html">
                                     <span class="sidebar-menu-text">Mini + Secondary</span>
                                 </a>
                             </li>
                             <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="cms-dashboard.html">
+                                <a class="sidebar-menu-button" href="email.html">
                                     <span class="sidebar-menu-text">App</span>
                                 </a>
                             </li>
                             <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="boxed-cms-dashboard.html">
+                                <a class="sidebar-menu-button" href="boxed-email.html">
                                     <span class="sidebar-menu-text">Boxed</span>
                                 </a>
                             </li>
                             <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="sticky-cms-dashboard.html">
+                                <a class="sidebar-menu-button" href="sticky-email.html">
                                     <span class="sidebar-menu-text">Sticky</span>
                                 </a>
                             </li>
                             <li class="sidebar-menu-item active">
-                                <a class="sidebar-menu-button" href="fixed-cms-dashboard.html">
+                                <a class="sidebar-menu-button" href="fixed-email.html">
                                     <span class="sidebar-menu-text">Fixed</span>
                                 </a>
                             </li>
@@ -1000,3 +1004,4 @@
             </div>
         </div>
     </div>
+    <!-- // END drawer -->
