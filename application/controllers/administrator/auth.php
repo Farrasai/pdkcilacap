@@ -51,13 +51,13 @@ class Auth extends CI_Controller
                 }
                 else
                 {
-                    $this->session->set_flashdata('pesan', 'Maaf Username dan Password anda salah silakan coba kembali');
+                    $this->session->set_flashdata('pesan', '申し訳ありませんが、ユーザー名とパスワードが間違っています。もう一度お試しください');
                     redirect('./administrator/auth');
                 }
             }
             else
             {
-                $this->session->set_flashdata('pesan', 'Maaf Username dan Password anda salah silakan coba kembali');
+                $this->session->set_flashdata('pesan', '申し訳ありませんが、ユーザー名とパスワードが間違っています。もう一度お試しください');
                 redirect('./administrator/auth');
             }
         }
