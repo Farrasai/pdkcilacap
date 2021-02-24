@@ -9,13 +9,13 @@
         </div>
             <form method="post" action="<?php echo base_url('administrator/auth/proses_login')?>" class="user, col-md-5 p-0 mx-auto">
                 <div class="form-group">
-                    <label class="form-label" for="email">Email:</label>
-                    <input id="email" type="text" name="email" class="form-control" placeholder="Your email address ...">
-                    <?php echo form_error('email', '<div class="text-danger small ml-3">, </div>') ?>
+                    <label class="form-label" for="username">Username:</label>
+                    <input id="username" type="text" name="username" class="form-control form-control-user" placeholder="Your username ...">
+                    <?php echo form_error('username', '<div class="text-danger small ml-3">, </div>') ?>
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="password">Password:</label>
-                    <input id="password" type="password" name="password" class="form-control" placeholder="Your first and last name ...">
+                    <input id="password" type="password" name="password" class="form-control form-control-user" placeholder="Your first and last name ...">
                     <?php echo form_error('password', '<div class="text-danger small ml-3">, </div>') ?>
                     <p class="text-right"><a href="fixed-reset-password.html" class="small">Forgot your password?</a></p>
                 </div>

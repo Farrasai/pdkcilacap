@@ -1,6 +1,6 @@
 <?php
 
-class login_model extends CI_Model
+class Login_model extends CI_Model
 {
     public function cek_login($email, $password)
     {
@@ -28,13 +28,13 @@ class login_model extends CI_Model
                     $sess_data ['level']        = $ck->level;
                     $this->session->set_userdata($sess_data);
                 }
-                redirect('./administrator/dashboard');
+                redirect('administrator/dashboard');
             }
         }
         else
         {
-            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>申し訳ありませんが、ユーザー名とパスワードが間違っています。もう一度お試しください</div>');
-            redirect('./administrator/auth');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Sorry your username and password is wrong, please try again</div>');
+            redirect('administrator/auth');
         }
     }
 }
