@@ -5,7 +5,7 @@ class Auth extends CI_Controller
     public function index()
     {
         $this->load->view('templates_administrator/header');
-        $this->load->view('templates_administrator/sidebar');
+        $this->load->view('templates_administrator/sidesign');
         $this->load->view('administrator/login');
         $this->load->view('templates_administrator/footer');
     }

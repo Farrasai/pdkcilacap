@@ -103,7 +103,7 @@
                     </button>
 
                     <!-- Navbar Brand -->
-                    <a href="fixed-index.html" class="navbar-brand mr-16pt">
+                    <a href="<?php echo base_url() ?>" class="navbar-brand mr-16pt">
                         <!-- <img class="navbar-brand-icon" src="assets/images/logo/white-100@2x.png" width="30" alt="Luma"> -->
 
                         <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
@@ -117,7 +117,7 @@
 
                     <ul class="nav navbar-nav d-none d-sm-flex flex justify-content-start ml-8pt">
                         <li class="nav-item active">
-                            <a href="fixed-index.html" class="nav-link">Home</a>
+                            <a href="<?php echo base_url() ?>" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">Courses</a>
@@ -191,7 +191,7 @@
                             <a href="fixed-login.html" class="nav-link" data-toggle="tooltip" data-title="Login" data-placement="bottom" data-boundary="window"><i class="material-icons">lock_open</i></a>
                         </li>
                         <li class="nav-item">
-                            <a href="fixed-signup.html" class="btn btn-outline-white">Get Started</a>
+                            <a href="administrator/auth" class="btn btn-outline-white">Get Started</a>
                         </li>
                     </ul>
                 </div>
@@ -1513,7 +1513,7 @@
 
 
                 <div class="d-flex align-items-center navbar-height">
-                    <form action="fixed-index.html" class="search-form search-form--black mx-16pt pr-0 pl-16pt">
+                    <form action="<?php echo base_url() ?>" class="search-form search-form--black mx-16pt pr-0 pl-16pt">
                         <input type="text" class="form-control pl-0" placeholder="Search">
                         <button class="btn" type="submit"><i class="material-icons">search</i></button>
                     </form>
@@ -1521,7 +1521,7 @@
 
 
 
-                <a href="fixed-index.html" class="sidebar-brand ">
+                <a href="<?php echo base_url() ?>" class="sidebar-brand ">
                     <!-- <img class="sidebar-brand-icon" src="assets/images/illustration/student/128/white.svg" alt="Luma"> -->
 
                     <span class="avatar avatar-xl sidebar-brand-icon h-auto">
@@ -1540,7 +1540,7 @@
 
 
                     <li class="sidebar-menu-item active">
-                        <a class="sidebar-menu-button" href="fixed-index.html">
+                        <a class="sidebar-menu-button" href="<?php echo base_url() ?>">
                             <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">home</span>
                             <span class="sidebar-menu-text">Home</span>
                         </a>
@@ -1889,7 +1889,7 @@
                                 </a>
                             </li>
                             <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="fixed-login.html">
+                                <a class="sidebar-menu-button" href="administrator/auth">
                                     <span class="sidebar-menu-text">Login</span>
                                 </a>
                             </li>
@@ -2253,7 +2253,7 @@
                                 </a>
                             </li>
                             <li class="sidebar-menu-item active">
-                                <a class="sidebar-menu-button" href="fixed-index.html">
+                                <a class="sidebar-menu-button" href="<?php echo base_url() ?>">
                                     <span class="sidebar-menu-text">Fixed</span>
                                 </a>
                             </li>
