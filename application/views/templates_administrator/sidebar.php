@@ -221,7 +221,7 @@
                                 <a class="dropdown-item" href="fixed-edit-account.html">Edit Account</a>
                                 <a class="dropdown-item" href="fixed-billing.html">Billing</a>
                                 <a class="dropdown-item" href="fixed-billing-history.html">Payments</a>
-                                <a class="dropdown-item" href="fixed-login.html">Logout</a>
+                                <a class="dropdown-item" href="<?php echo base_url('administrator/auth/logout') ?>">Logout</a>
                             </div>
                         </div>
                     </div>
